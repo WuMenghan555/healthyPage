@@ -23,6 +23,7 @@
 export default {
   data() {
     return {
+      value: '',
       option: [
         { text: "南京", value: 0 },
         { text: "江苏", value: 1 },
@@ -59,6 +60,9 @@ export default {
   methods: {
     toDetail () {
       this.$router.push({path: 'hostpitalDetail'})
+    },
+    onSearch(){
+
     }
   }
 };

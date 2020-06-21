@@ -9,7 +9,7 @@
     </div>
     <div class="tab">
       <div class="tab-item" v-for="(item, indexs) in title" :key="indexs">
-        <div :class="{active:cur==indexs}" @click="cur=indexs" style="height:100%">
+        <div :class="{active:cur==indexs}" @click="toNext(indexs)" style="height:100%">
           <van-icon name="star-o" size=".4rem" />
           <p>{{item}}</p>
         </div>
@@ -66,6 +66,15 @@ export default {
   methods: {
     startEvaluation () {
       this.$router.push({path: '/healthyservices/onlinetest'})
+    },
+    toNext (index) {
+      this.cur = index
+      if (index === 1) {
+        this.$router.push({path: '/onlineconsultation'})
+      }
+      if (index === 2) {
+        this.$router.push({path: '/appointment'})
+      }
     }
   }
 }
@@ -74,9 +83,6 @@ export default {
 * {
   margin: 0;
   padding: 0;
-}
-.swiper {
-  margin-top: 0.1rem;
 }
 .my-swipe .van-swipe-item {
   color: #fff;

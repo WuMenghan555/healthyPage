@@ -15,11 +15,15 @@
     <nav>
       <div class="nav-common">
         <div class="nav-items">
-          <a href="#" @click="toSubmit()">预约挂号</a>
+          <img src="../../../assets/left.jpg" alt="" @click="toSubmit()">
         </div>
         <div class="nav-items">
-          <a href="#">科室医生</a>
-          <a href="#">医院概况</a>
+          <div class="first">
+            <img src="../../../assets/doctor.jpg" alt="">
+          </div>
+          <div class="two">
+            <img src="../../../assets/hospitalDetail.jpg" alt="">
+          </div>
         </div>
       </div>
     </nav>
@@ -75,6 +79,10 @@ export default {
 }
 </script>
 <style scoped>
+a {
+  margin: 0;
+  padding: 0;
+}
 .header {
   width: 100%;
   background-color: #fff;
@@ -118,7 +126,7 @@ export default {
 }
 .nav-common {
   width: 100%;
-  height: 2rem;
+  height: 1.8rem;
   display: flex;
   background-color: #fff;
   margin-top: 1.4rem;
@@ -128,19 +136,34 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 0 0.05rem;
-}
-.nav-items:nth-child(0) {
   border-right: 0.01rem solid #ccc;
+  border-radius: .08rem;
+  box-shadow: 0 0 .03rem 0 #ddd;
 }
-.nav-items a {
+.nav-items .option {
+  text-align: center;
+  line-height: .5rem;
+}
+.first {
+  font-size: .20rem;
+}
+.first .van-icon {
+  width: .6rem;
+  height: .6rem;
+}
+.nav-items div {
   flex: 1;
   text-align: center;
   margin: auto;
   line-height: 0.44rem;
   color: #000;
   font-size: 0.14rem;
-  /* 文字阴影 */
   text-shadow: 0.01rem 0.01rem rgba(0, 0, 0, 0.2);
+}
+
+.nav-items img {
+  width: 100%;
+  height: 100%;
 }
 .van-tag {
     margin: .05rem .05rem;

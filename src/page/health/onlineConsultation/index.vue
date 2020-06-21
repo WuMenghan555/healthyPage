@@ -17,23 +17,23 @@
         <div class="footer" @click="chooseBtn()">选择服务时长</div>
         <van-action-sheet v-model="show">
             <div class="choose-content">
-                <div class="box1">24小时</div>
-                <div class="box2">七天</div>
-                <div class="box3">一个月</div>
-                <div class="box4">三个月</div>
+                <div :class="{active:cur==index}" v-for="(item, index) in box" :key="index" @click="cur=index">{{item}}</div>
             </div>
             <div class="btn">
-                <van-button block color="#a778de">立即开通</van-button>
+                <van-button block color="#a778de" @click="success()">立即开通</van-button>
             </div>
         </van-action-sheet>
     </div>
 </template>
 <script>
+import { Toast } from 'vant'
 export default {
   data () {
     return {
       label: '请详细描述您的问题，包括身体状况，疾病和病症等，我们会为您分配最专业的医生，并且保证您的隐私安全（最少十个字）',
-      show: false
+      show: false,
+      box: ['24小时', '七天', '一个月', '三个月'],
+      cur: 0
     }
   },
   methods: {
@@ -43,6 +43,9 @@ export default {
     },
     chooseBtn () {
       this.show = true
+    },
+    success(){
+        Toast.success('开通成功')
     }
   }
 }
@@ -114,6 +117,10 @@ body {
     border: .01rem solid #a778de;
     margin: .1rem;
     font-size: .20rem;
+}
+.choose-content .active {
+    background-color: #a778de;
+    opacity: .5;
 }
 .btn {
     width: 3rem;
