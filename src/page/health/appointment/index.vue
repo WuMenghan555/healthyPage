@@ -59,7 +59,14 @@ export default {
     toDetail() {
       this.$router.push({ path: 'hostpitalDetail' })
     },
-    onSearch() {}
+    onSearch(val) {
+        for (var i = 0; i < this.list.length - 1; i++) {
+          if (this.list[i].title.toString().indexOf(val) >= 0) {
+            this.list.push(this.list[i])
+          }
+        }
+        return this.list
+    }
   }
 }
 </script>

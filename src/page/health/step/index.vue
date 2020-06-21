@@ -1,5 +1,8 @@
 <template>
   <div class="step">
+    <div class="swiper">
+      <img src="../../../assets/headLine.jpg" alt />
+    </div>
     <div class="header">
       <div class="ka">
         <p>8089</p>
@@ -18,26 +21,47 @@
         <p style="font-size:.14rem;color:#c4c4c4;">公里</p>
       </div>
     </div>
-    <div class="card">
+    <div class="content">
+      <van-cell-group>
+        <van-cell title="跑步" value="1千卡/小时" size="large"/>
+        <van-cell title="快走" value="2千卡/小时" size="large"/>
+        <van-cell title="仰卧起坐" value="2千卡/小时" size="large"/>
+        <van-cell title="俯卧撑" value="2千卡/小时" size="large"/>
+        <van-cell title="俯卧撑" value="2千卡/小时" size="large"/>
+        <van-cell title="俯卧撑" value="2千卡/小时" size="large"/>
+        <van-cell title="俯卧撑" value="2千卡/小时" size="large"/>
+        <van-cell title="俯卧撑" value="2千卡/小时" size="large"/>
+      </van-cell-group>
+    </div>
+    <!-- <div class="card">
       <ul class="card_list">
         <li></li>
         <li></li>
         <li></li>
         <li></li>
       </ul>
-    </div>
+    </div>-->
   </div>
 </template>
 <style scoped>
 .step {
   width: 100%;
-  height: 2.5rem;
+  height: 100%;
+}
+.step .swiper {
+  width: 100%;
+  height: 2rem;
+}
+.swiper img {
+  width: 100%;
+  height: 100%;
 }
 .step .header {
   width: 100%;
   height: 1rem;
+  margin-top: 0.1rem;
 }
-.step div {
+.header div {
   float: left;
   width: 20%;
   height: 100%;

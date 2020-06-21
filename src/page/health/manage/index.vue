@@ -4,7 +4,7 @@
     <div class="manage_wrapper">
       <ul class="manage_group">
         <li class="group_items" v-for="(item,index) in manageList" :key="index">
-          <img class="items_img" :src="item.img_src" />
+          <img class="items_img" :src="item.img_src" @click="toNext(index)" />
           <p class="text">{{item.item_text}}</p>
         </li>
       </ul>
@@ -20,20 +20,20 @@
             <img src="../../../assets/examine.png" class="examine_img" />
           </li>
           <li class="group_items">
-            <p class="item_text">
+            <p class="item_text" @click="Lecture()">
               <span class="title">健康讲座及活动</span>
               <span class="info">精彩活动享不停</span>
             </p>
             <img src="../../../assets/examine.png" class="examine_img" />
           </li>
-          <li class="group_items">
+          <li class="group_items" @click="toGround()">
             <p class="item_text">
               <span class="title">就医绿色通道</span>
               <span class="info">绿色通道</span>
             </p>
             <img src="../../../assets/examine.png" class="examine_img" />
           </li>
-          <li class="group_items">
+          <li class="group_items" @click="toGround()">
             <p class="item_text">
               <span class="title">海外转诊绿色通道</span>
               <span class="info">绿色通道</span>
@@ -46,13 +46,13 @@
       <!-- 治疗 -->
       <div class="therapeutic">
         <ul class="therapeutic_group">
-          <li class="smo group_item">
+          <li class="smo group_item" @click="toSMO">
             <span>SMO二次会诊</span>
           </li>
-          <li class="mdt group_item">
+          <li class="mdt group_item" @click="toSMO">
             <span>MDT多学科会诊</span>
           </li>
-          <li class="group_item">
+          <li class="group_item" @click="toCancer()">
             <span>肿瘤质子治疗评估</span>
           </li>
         </ul>
@@ -72,6 +72,42 @@ export default {
         { img_src: require('@/assets/yy.jpg'), item_text: '报告解读' },
         { img_src: require('@/assets/yy.jpg'), item_text: '慢病送药' }
       ]
+    }
+  },
+  methods: {
+    toNext(index) {
+      if (index === 1) {
+        this.$router.push({ path: '/phonedoctor' })
+      }
+      switch (index) {
+        case 0:
+          this.$router.push({ path: '/advance' })
+          break
+        case 1:
+          this.$router.push({ path: '/phonedoctor' })
+          break
+        case 2:
+          this.$router.push({ path: '/genetictesting' })
+          break
+        case 3:
+          this.$router.push({ path: '/cancerscreening' })
+          break
+        case 4:
+          this.$router.push({ path: '/report' })
+          break
+      }
+    },
+    Lecture() {
+      this.$router.push({ path: '/lecture' })
+    },
+    toCancer() {
+      this.$router.push({ path: '/cancer' })
+    },
+    toGround() {
+      this.$router.push({ path: '/greenground' })
+    },
+    toSMO() {
+      this.$router.push({ path: '/smo' })
     }
   }
 }
@@ -154,7 +190,7 @@ export default {
   margin-left: 0.1rem;
 }
 .manage .manage_wrapper .therapeutic {
-    margin-top: .1rem;
+  margin-top: 0.1rem;
 }
 .manage .manage_wrapper .therapeutic .therapeutic_group {
   display: flex;

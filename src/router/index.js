@@ -20,7 +20,17 @@ import toexamination from '@/page/health/healthyMall/toexamination.vue'
 import buyDetail from '@/page/health/healthyMall/buyDetail.vue'
 import healthyequipment from '@/page/health/healthyMall/healthyequipment.vue'
 import equipmentdetail from '@/page/health/healthyMall/equipmentDetail.vue'
-import Manage from '@/page/manage/index'
+import Manage from '@/page/health/manage/index'
+import phoneDoctor from '@/page/health/phoneDoctor/index.vue'
+import Advance from '@/page/health/Advance/index.vue'
+import geneticTesting from '@/page/health/geneticTesting/index.vue'
+import cancerScreening from '@/page/health/cancerScreening/index.vue'
+import report from '@/page/health/report/index.vue'
+import lecture from '@/page/health/lecture/index.vue'
+import cancer from '@/page/health/cancerTest/index.vue'
+import cancerResult from '@/page/health/cancerTest/result.vue'
+import greenGround from '@/page/health/greenGround/index.vue'
+import SMO from '@/page/health/SMO/index.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +62,16 @@ export default new Router({
     { path: '/buydetail', name: 'buyDetail', component: buyDetail },
     { path: '/healthyequipment', name: 'healthyequipment', component: healthyequipment },
     { path: '/equipmentdetail', name: 'equipmentdetail', component: equipmentdetail },
-    { path: '/manage', name: 'manage', component: Manage }
+    { path: '/manage', name: 'manage', component: Manage },
+    { path: '/phonedoctor', name: 'phoneDoctor', component: phoneDoctor },
+    { path: '/advance', name: 'Advance', component: Advance },
+    { path: '/genetictesting', name: 'geneticTesting', component: geneticTesting },
+    { path: '/cancerscreening', name: 'cancerScreening', component: cancerScreening },
+    { path: '/report', name: 'report', component: report },
+    { path: '/lecture', name: 'lecture', component: lecture },
+    { path: '/cancer', name: 'cancer', component: cancer },
+    { path: '/cancerresult', name: 'cancerResult', component: cancerResult },
+    { path: '/greenground', name: 'greenGround', component: greenGround },
+    { path: '/smo', name: 'SMO', component: SMO }
   ]
 })
