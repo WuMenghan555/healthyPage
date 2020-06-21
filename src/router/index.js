@@ -20,7 +20,7 @@ import toexamination from '@/page/health/healthyMall/toexamination.vue'
 import buyDetail from '@/page/health/healthyMall/buyDetail.vue'
 import healthyequipment from '@/page/health/healthyMall/healthyequipment.vue'
 import equipmentdetail from '@/page/health/healthyMall/equipmentDetail.vue'
-
+import Manage from '@/page/manage/index'
 Vue.use(Router)
 
 export default new Router({
@@ -52,5 +52,6 @@ export default new Router({
     { path: '/buydetail', name: 'buyDetail', component: buyDetail },
     { path: '/healthyequipment', name: 'healthyequipment', component: healthyequipment },
     { path: '/equipmentdetail', name: 'equipmentdetail', component: equipmentdetail },
+    { path: '/manage', name: 'manage', component: Manage }
   ]
 })
