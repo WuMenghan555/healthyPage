@@ -12,7 +12,7 @@
       <!-- 体检/活动 -->
       <div class="examine_activity">
         <ul class="group">
-          <li class="group_items">
+          <li class="group_items" @click="$router.push('/examine')">
             <p class="item_text">
               <span class="title">体检服务</span>
               <span class="info">掌上体检便捷预约</span>
@@ -65,12 +65,30 @@ export default {
   data() {
     return {
       manageList: [
-        { img_src: require('@/assets/yy.jpg'), item_text: '住院垫付' },
-        { img_src: require('@/assets/yy.jpg'), item_text: '电话医生' },
-        { img_src: require('@/assets/yy.jpg'), item_text: '基因检测' },
-        { img_src: require('@/assets/yy.jpg'), item_text: '肿瘤筛查' },
-        { img_src: require('@/assets/yy.jpg'), item_text: '报告解读' },
-        { img_src: require('@/assets/yy.jpg'), item_text: '慢病送药' }
+        {
+          img_src: require('@/assets/yy.jpg'),
+          item_text: '住院垫付'
+        },
+        {
+          img_src: require('@/assets/yy.jpg'),
+          item_text: '电话医生'
+        },
+        {
+          img_src: require('@/assets/yy.jpg'),
+          item_text: '基因检测'
+        },
+        {
+          img_src: require('@/assets/yy.jpg'),
+          item_text: '肿瘤筛查'
+        },
+        {
+          img_src: require('@/assets/yy.jpg'),
+          item_text: '报告解读'
+        },
+        {
+          img_src: require('@/assets/yy.jpg'),
+          item_text: '慢病送药'
+        }
       ]
     }
   },
@@ -94,6 +112,9 @@ export default {
           break
         case 4:
           this.$router.push({ path: '/report' })
+          break
+        case 5:
+          this.$router.push({ path: '/propellentCharge' })
           break
       }
     },
@@ -182,6 +203,7 @@ export default {
 }
 .manage .manage_wrapper .examine_activity .group .group_items .item_text .info {
   font-size: 0.11rem;
+  width: 0.96rem;
 }
 .manage .manage_wrapper .examine_activity .group .group_items .examine_img {
   height: 0.5rem;

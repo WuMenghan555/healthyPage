@@ -31,11 +31,12 @@ import cancer from '@/page/health/cancerTest/index.vue'
 import cancerResult from '@/page/health/cancerTest/result.vue'
 import greenGround from '@/page/health/greenGround/index.vue'
 import SMO from '@/page/health/SMO/index.vue'
+import examine from '@/page/health/examine/examine'
+import propellentCharge from '@/page/health/propellentCharge/propellentCharge'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/healthyheadlines',
       name: 'Healthyheadlines',
       component: healthyHeadlines
@@ -72,6 +73,8 @@ export default new Router({
     { path: '/cancer', name: 'cancer', component: cancer },
     { path: '/cancerresult', name: 'cancerResult', component: cancerResult },
     { path: '/greenground', name: 'greenGround', component: greenGround },
-    { path: '/smo', name: 'SMO', component: SMO }
+    { path: '/smo', name: 'SMO', component: SMO },
+    { path: '/examine', name: 'examine', component: examine },
+    { path: '/propellentCharge', name: 'propellentCharge', component: propellentCharge }
   ]
 })
