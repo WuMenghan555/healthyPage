@@ -56,9 +56,12 @@
   width: 100%;
   height: 1rem;
 }
+.card ul {
+  width: 100%;
+}
 .card ul li {
     list-style: none;
-    float: right;
+    float: left;
     background-color: pink;
     width: .4rem;
     height: .4rem;
