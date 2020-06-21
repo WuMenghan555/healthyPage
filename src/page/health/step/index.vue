@@ -19,11 +19,11 @@
       </div>
     </div>
     <div class="card">
-      <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+      <ul class="card_list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
   </div>
@@ -56,15 +56,18 @@
   width: 100%;
   height: 1rem;
 }
-.card ul li {
-    list-style: none;
-    float: right;
-    background-color: pink;
-    width: .4rem;
-    height: .4rem;
+.card_list {
+  width: 1.6rem;
+}
+.card .card_list li {
+  list-style: none;
+  float: right;
+  background-color: pink;
+  width: 0.4rem;
+  height: 0.4rem;
 }
 .card div {
-  width: .4rem;
+  width: 0.4rem;
   height: 100%;
   font-size: 0.16rem;
   background-color: #ff0;

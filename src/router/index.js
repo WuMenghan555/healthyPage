@@ -12,6 +12,7 @@ import submit from '@/page/health/submit/index.vue'
 import step from '@/page/health/step/index.vue'
 import heathyHeadlines from '@/page/health/healthyHeadlines/index.vue'
 import headLineDetail from '@/page/health/headLineDetail/index.vue'
+import Manage from '@/page/health/manage/index'
 
 Vue.use(Router)
 
@@ -39,6 +40,7 @@ export default new Router({
     { path: '/submit', name: 'submit', component: submit },
     { path: '/step', name: 'step', component: step },
     { path: '/heathyheadlines', name: 'heathyHeadlines', component: heathyHeadlines },
-    { path: '/headlinedetail', name: 'headLineDetail', component: headLineDetail }
+    { path: '/headlinedetail', name: 'headLineDetail', component: headLineDetail },
+    { path: '/manage', name: 'manage', component: Manage }
   ]
 })

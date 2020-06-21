@@ -21,23 +21,23 @@
   </div>
 </template>
 <script>
-import {Toast} from 'vant'
+import { Toast } from 'vant'
 export default {
   data() {
     return {
-      tel: "",
-      digit: "",
-      text: "",
-      text1: "",
-      number: ""
-    };
+      tel: '',
+      digit: '',
+      text: '',
+      text1: '',
+      number: ''
+    }
   },
   methods: {
-      submit () {
-          Toast.success('预约成功')
-      }
+    submit() {
+      Toast.success('预约成功')
+    }
   }
-};
+}
 </script>
 <style scoped>
 body {
