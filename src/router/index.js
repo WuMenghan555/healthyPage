@@ -36,7 +36,8 @@ import propellentCharge from '@/page/health/propellentCharge/propellentCharge'
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
+  routes: [
+    {
       path: '/healthyheadlines',
       name: 'Healthyheadlines',
       component: healthyHeadlines
@@ -48,12 +49,24 @@ export default new Router({
     },
     { path: '/onlinetest', name: 'onlinetest', component: onlineTest },
     { path: '/result', name: 'result', component: result },
-    { path: '/onlineconsultation', name: 'onlineConsultation', component: onlineConsultation },
+    {
+      path: '/onlineconsultation',
+      name: 'onlineConsultation',
+      component: onlineConsultation
+    },
     { path: '/appointment', name: 'appointment', component: appointment },
-    { path: '/hostpitaldetail', name: 'hostpitaldetail', component: hostpitalDetail },
+    {
+      path: '/hostpitaldetail',
+      name: 'hostpitaldetail',
+      component: hostpitalDetail
+    },
     { path: '/submit', name: 'submit', component: submit },
     { path: '/step', name: 'step', component: step },
-    { path: '/headlinedetail', name: 'headLineDetail', component: headLineDetail },
+    {
+      path: '/headlinedetail',
+      name: 'headLineDetail',
+      component: headLineDetail
+    },
     { path: '/healthrecord', name: 'healthRecord', component: healthRecord },
     { path: '/selfdata', name: 'selfdata', component: selfdata },
     { path: '/healthydata', name: 'healthydata', component: healthydata },
@@ -61,13 +74,29 @@ export default new Router({
     { path: '/healthypoints', name: 'healthyPoints', component: healthyPoints },
     { path: '/toexamination', name: 'toexamination', component: toexamination },
     { path: '/buydetail', name: 'buyDetail', component: buyDetail },
-    { path: '/healthyequipment', name: 'healthyequipment', component: healthyequipment },
-    { path: '/equipmentdetail', name: 'equipmentdetail', component: equipmentdetail },
+    {
+      path: '/healthyequipment',
+      name: 'healthyequipment',
+      component: healthyequipment
+    },
+    {
+      path: '/equipmentdetail',
+      name: 'equipmentdetail',
+      component: equipmentdetail
+    },
     { path: '/manage', name: 'manage', component: Manage },
     { path: '/phonedoctor', name: 'phoneDoctor', component: phoneDoctor },
     { path: '/advance', name: 'Advance', component: Advance },
-    { path: '/genetictesting', name: 'geneticTesting', component: geneticTesting },
-    { path: '/cancerscreening', name: 'cancerScreening', component: cancerScreening },
+    {
+      path: '/genetictesting',
+      name: 'geneticTesting',
+      component: geneticTesting
+    },
+    {
+      path: '/cancerscreening',
+      name: 'cancerScreening',
+      component: cancerScreening
+    },
     { path: '/report', name: 'report', component: report },
     { path: '/lecture', name: 'lecture', component: lecture },
     { path: '/cancer', name: 'cancer', component: cancer },
@@ -75,6 +104,10 @@ export default new Router({
     { path: '/greenground', name: 'greenGround', component: greenGround },
     { path: '/smo', name: 'SMO', component: SMO },
     { path: '/examine', name: 'examine', component: examine },
-    { path: '/propellentCharge', name: 'propellentCharge', component: propellentCharge }
+    {
+      path: '/propellentCharge',
+      name: 'propellentCharge',
+      component: propellentCharge
+    }
   ]
 })
